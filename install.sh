@@ -20,7 +20,6 @@ apt install -y bash \
     locales
 
 locale-gen ja_JP.UTF-8
-update-locale LANG=ja_JP.UTF-8
 echo "export LANG=ja_JP.UTF-8" >> ~/.bashrc
 
 # Install neovim in latest version
