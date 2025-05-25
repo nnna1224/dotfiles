@@ -37,5 +37,5 @@ CMD ["bash"]
 - python: pylsp
     - pyrightを使う場合はnodejsとnpmをインストールする．
     - transformersライブラリの都合上，研究室ではpylspを使うことが多い．
-- c/cpp: clang
+- c/cpp: clangd
     - unzipをインストールする．
