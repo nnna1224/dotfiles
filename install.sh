@@ -22,7 +22,6 @@ apt install -y bash \
 
 # Install neovim in latest version
 cd /usr/local/bin
-uname -m
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
 chmod u+x ./nvim-linux-x86_64.appimage
 ./nvim-linux-x86_64.appimage --appimage-extract
@@ -34,7 +33,9 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 # Create symbolic link to config files
 cd "$SCRIPT_DIR"
+echo $(pwd)
 ln -s ./nvim ~/.config/nvim
+ln -s ./.gitconfig ~/.gitconfig
 
 # Install packages
 nvim --headless -c "autocmd User PackerComplete quitall" -c "PackerSync"
