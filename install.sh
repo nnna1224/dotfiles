@@ -32,8 +32,8 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 # Create symbolic link to config files
+mkdir -p ~/.config/
 cd "$SCRIPT_DIR"
-echo $(pwd)
 ln -s ./nvim ~/.config/nvim
 ln -s ./.gitconfig ~/.gitconfig
 
