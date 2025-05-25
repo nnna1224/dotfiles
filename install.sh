@@ -34,8 +34,8 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 # Create symbolic link to config files
 mkdir -p ~/.config/
 cd "$SCRIPT_DIR"
-ln -s ./nvim ~/.config/nvim
-ln -s ./.gitconfig ~/.gitconfig
+ln -s $(SCRIPT_DIR)/nvim ~/.config/nvim
+ln -s $(SCRIPT_DIR)/.gitconfig ~/.gitconfig
 
 # Install packages
 nvim --headless -c "autocmd User PackerComplete quitall" -c "PackerSync"
