@@ -48,7 +48,7 @@ ln -s "$SCRIPT_DIR/nvim" ~/.config/nvim
 ln -s "$SCRIPT_DIR/.gitconfig" ~/.gitconfig
 
 # Install packages
-# nvim --headless -c "autocmd User PackerSyncComplete quitall" -c "PackerSync"
+nvim --headless -c "autocmd User PackerComplete quitall" -c "PackerSync"
 
 # clean up apt cache to reduce size
 apt clean
