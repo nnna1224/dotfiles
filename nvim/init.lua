@@ -46,7 +46,16 @@ vim.cmd('highlight LineNr guifg=#707070')
 vim.cmd('highlight Pmenu guibg=#303030')
 
 require('lualine').setup{
-    options = {theme = 'catppuccin'}
+    options = {
+        theme = 'catppuccin',
+        icon_enabled = false,
+    }
 }
 
-require("bufferline").setup{}
+require("bufferline").setup{
+    options = {
+        show_buffer_icons = false,
+        show_buffer_close_icons =false,
+        show_close_icon = false,
+    }
+}
