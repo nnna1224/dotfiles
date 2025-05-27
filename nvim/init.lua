@@ -47,15 +47,15 @@ vim.cmd('highlight Pmenu guibg=#303030')
 
 require('lualine').setup{
     options = {
+        icons_enabled = false,
         theme = 'catppuccin',
-        icon_enabled = false,
-    }
+    },
 }
 
 require("bufferline").setup{
-    options = {
-        show_buffer_icons = false,
-        show_buffer_close_icons =false,
-        show_close_icon = false,
-    }
+  options = {
+    show_buffer_close_icons = false,
+    show_close_icon = false,
+    diagnostics = "nvim_lsp",
+  }
 }
