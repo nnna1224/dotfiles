@@ -47,6 +47,11 @@ ln -s "$SCRIPT_DIR/nvim" ~/.config/nvim
 [ -f ~/.gitconfig ] && mv ~/.gitconfig ~/.gitconfig.backup.$(date +%Y%m%d%H%M%S)
 ln -s "$SCRIPT_DIR/.gitconfig" ~/.gitconfig
 
+# Backup and make tmux config link
+[ -L ~/.tmux.conf ] && rm ~/.tmux.conf
+[ -f ~/.tmux.conf ] && mv ~/.tmux.conf ~/.tmux.conf.backup.$(date +%Y%m%d%H%M%S)
+ln -s "$SCRIPT_DIR/.tmux.conf" ~/.tmux.conf
+
 # Install packages
 nvim --headless -c "autocmd User PackerComplete quitall" -c "PackerSync"
 
