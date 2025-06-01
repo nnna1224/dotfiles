@@ -65,4 +65,24 @@ return require('packer').startup(function(use)
             require("toggleterm").setup()
         end
     }
+
+    -- diagnostics
+    use {
+        "rachartier/tiny-inline-diagnostic.nvim",
+        event = "LspAttach",
+        priority = 1000,
+        config = function()
+            require('tiny-inline-diagnostic').setup()
+            vim.diagnostic.config({ virtual_text = false })
+        end
+    }
+
+    -- gitsigns.nvim
+    use {
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require("gitsigns").setup()
+    end
+    }
+
 end)
