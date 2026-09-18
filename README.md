@@ -23,7 +23,12 @@ chezmoiで管理しているWindows向けの設定ファイル
 chezmoi init --apply nnna1224
 ```
 
-初回実行時にGitのユーザー名とメールアドレスを入力する。
+初回実行時に、次の項目を設定する。
+
+- Gitのユーザー名とメールアドレス
+- [`presence.nvim`](https://github.com/andweeb/presence.nvim)の追加（既定は無効）
+
+`presence.nvim`を有効にすると、Neovimでの作業状況がDiscordに表示される。
 
 ## 基本操作
 
@@ -47,4 +52,3 @@ Leaderキーは`Space`。
 | `<Leader>e` | ファイラー |
 | `<Leader>ff` | ファイル検索 |
 | `<Leader>fg` | 全文検索 |
-
