@@ -1,6 +1,8 @@
 {{- $gitName := promptStringOnce . "gitName" "Git user name" -}}
 {{- $gitEmail := promptStringOnce . "gitEmail" "Git user email" -}}
+{{- $presenceNvim := promptBoolOnce . "presenceNvim" "presence.nvim は、Neovim で編集中のファイルやプロジェクト、作業時間を Discord のアクティビティに表示するプラグインです。表示内容は Discord 上で他のユーザーから見える場合があります。追加しますか？" false -}}
 
 [data]
 gitName = {{ $gitName | quote }}
 gitEmail = {{ $gitEmail | quote }}
+presenceNvim = {{ $presenceNvim }}
