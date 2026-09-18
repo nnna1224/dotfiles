@@ -1,0 +1,44 @@
+[user]
+    name = {{ .gitName | quote }}
+    email = {{ .gitEmail | quote }}
+
+[init]
+    defaultBranch = main
+
+[core]
+    editor = nvim
+    autocrlf = input
+
+[fetch]
+    prune = true
+
+[pull]
+    ff = only
+
+[push]
+    default = simple
+    autoSetupRemote = true
+
+[branch]
+    sort = -committerdate
+
+[tag]
+    sort = version:refname
+
+[diff]
+    tool = difftastic
+    external = difft
+[difftool]
+    prompt = false
+[difftool "difftastic"]
+    cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+    difftool = true
+
+[merge]
+    conflictStyle = zdiff3
+    tool = nvimdiff
+[mergetool]
+    prompt = false
+[mergetool "nvimdiff"]
+    layout = LOCAL,MERGED,REMOTE
