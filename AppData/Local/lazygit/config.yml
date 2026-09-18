@@ -1,0 +1,8 @@
+git:
+  diffRenderers:
+    - type: extDiff
+      name: difftastic
+      command: difft --color=always
+
+os:
+  editPreset: nvim
